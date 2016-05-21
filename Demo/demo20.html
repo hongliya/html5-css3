@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>canvas 移动坐标空间</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="flagwind.css" />
+	<style>
+		canvas
+		{
+			border: 1px solid #eee;
+			margin: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="myCanvas" width="700" height="300">您的浏览器不支持canvas</canvas>
+</body>
+</html>
+<script>
+	window.onload = function()
+	{
+		draw();
+	};
+
+	function draw()
+	{
+		var ctx = document.getElementById('myCanvas').getContext('2d');
+
+		ctx.translate(80, 80);
+
+		for (var i = 1; i < 10; i++)
+		{
+			console.log('rgb('+ (30*i) +','+ (255-30*i) +',255)');
+			ctx.save();
+			ctx.translate(60*i, 0);
+			drawTop(ctx, 'rgb('+ (30*i) +','+ (255-30*i) +',255)');
+			drawGrip(ctx);
+			ctx.restore();
+		}
+	}
+
+	function drawTop(ctx, fillStyle)
+	{
+		ctx.fillStyle = fillStyle;
+		ctx.beginPath();
+		ctx.arc(0, 0, 30, 0, Math.PI, true);
+		ctx.closePath();
+		ctx.fill();
+	}
+
+	function drawGrip(ctx)
+	{
+		ctx.save();
+		ctx.fillStyle = 'blue';
+		ctx.fillRect(-1.5, 0, 1.5, 40);
+		ctx.beginPath();
+		ctx.strokeStyle = 'blue';
+		ctx.arc(-5, 40, 4, Math.PI, Math.PI*2, true);
+		ctx.stroke();
+		ctx.closePath();
+		ctx.restore();
+	}
+</script>

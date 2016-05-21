@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>CSS3 综合案例：礼品盒</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style>
+		.cube
+		{
+			position: fixed;
+			top: 12px;
+			left: 50%;
+		}
+
+		.cube.one
+		{
+			top: 300px;
+			left: 50%;
+			margin-left: -200px;
+		}
+
+		.topFace div,
+		.leftFace,
+		.rightFace
+		{
+			padding: 0;
+			width: 180px;
+			height: 180px;
+			border: 1px solid #ddd;
+		}
+
+		.cube img
+		{
+			width: 180px;
+			height: 180px;
+		}
+
+		.topFace,
+		.leftFace,
+		.rightFace
+		{
+			position: absolute;
+		}
+
+		.cube:hover .toptFace div,
+		.cube:hover .leftFace,
+		.cube:hover .rightFace
+		{
+			background-color: #ffc;
+		}
+
+		.cube:hover .topFace:hover div,
+		.cube:hover .rightFace:hover,
+		.cube:hover .leftFace:hover
+		{
+			background-color: #ffa;
+		}
+
+		.leftFace
+		{
+			-webkit-transform: skew(0deg, 30deg);
+			-moz-transform: skew(0deg, 30deg);
+			transform: skew(0deg, 30deg);
+			background-color: #ccc;
+		}
+
+		.topFace div
+		{
+			-webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+			-moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+			transform: skew(0deg, -30deg) scale(1, 1.16);
+			background-color: #eee;
+			font-size: 0.862em;
+		}
+
+		.rightFace
+		{
+			-webkit-transform: skew(0deg, -30deg);
+			-moz-transform: skew(0deg, -30deg);
+			transform: skew(0deg, -30deg);
+			background-color: #ddd;
+			left: 180px;
+		}
+
+		.topFace
+		{
+			-webkit-transform: rotate(60deg);
+			-moz-transform: rotate(60deg);
+			transform: rotate(60deg);
+			top: -142px;
+			left: 89px;
+		}
+
+		.cube
+		{
+			-webkit-transition: -webkit-transform 1s linear;
+		}
+
+		.cube:hover
+		{
+			/*-webkit-transform: translate(202px, 115px);*/
+			-webkit-transform: rotate(360deg);
+			-webkit-transform-origin: center center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="cube one">
+		<div class="topFace">
+			<div>
+				<img src="images/lipin/lipin001.jpg" />
+			</div>
+		</div>
+
+		<div class="leftFace">
+			<img src="images/lipin/lipin002.jpg" />
+		</div>
+
+		<div class="rightFace">
+			<img src="images/lipin/lipin003.jpg" />
+		</div>
+	</div>
+</body>
+</html>

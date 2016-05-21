@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>定位</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="flagwind.css" />
+	<style>
+	</style>
+</head>
+
+<body>
+
+</body>
+</html>
+<script>
+	function checkGeolocationSupport()
+	{
+		if (navigator.geolocation)
+		{
+			console.log('您的浏览器支持定位！');
+			return true;
+		}
+		else
+		{
+			console.log('您的浏览器不支持定位！');
+			return false;
+		}
+	}
+
+	if (checkGeolocationSupport())
+	{
+		console.log(navigator.geolocation);
+		navigator.geolocation.getCurrentPosition(
+			function(position)
+			{
+				console.log(position);
+			},
+			function(error)
+			{
+				var errorTypes =
+				{
+					1: '位置服务被拒绝',
+					2: '获取不到位置信息',
+					3: '获取信息超时'
+				};
+
+				console.log(errorTypes[error.code] + ' : 不能确定当前位置信息');
+			}
+		);
+	}
+</script>

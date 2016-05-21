@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>web存储 sessionStorage</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="flagwind.css" />
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<a href="demo31.html">demo31</a>
+
+</body>
+</html>
+<script>
+	checkStorageSupport();
+	function checkStorageSupport()
+	{
+		if (window.sessionStorage)
+		{
+			console.log('支持sessionStorage');
+		}
+		else
+		{
+			console.log('不支持sessionStorage');
+		}
+
+		if (window.localStorage)
+		{
+			console.log('支持localStorage');
+		}
+		else
+		{
+			console.log('不支持localStorage');
+		}
+	}
+
+	// window.sessionStorage.setItem('name', 'alex');
+	// console.log(window.sessionStorage.getItem('name'));
+
+	window.sessionStorage.name = 'sugar';
+	console.log(window.sessionStorage.name);
+
+</script>

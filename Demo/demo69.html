@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>CSS3 综合案例：折叠面板</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style>
+		.accordion
+		{
+			margin: 2em;
+			border: 1px solid #999;
+			background-color: #eee;
+		}
+
+		.accordion h2
+		{
+			margin: 0;
+			padding: 12px 0;
+			background-color: #ccc;
+		}
+
+		.accordion .section
+		{
+			background-color: #fff;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.accordion h3
+		{
+			padding: 0;
+			margin: 0;
+			background-color: #eee;
+			padding: 3px 1em;
+		}
+
+		.accordion h3 a
+		{
+			font-weight: normal;
+			text-decoration: none;
+		}
+
+		.accordion :target h3 a
+		{
+			font-weight: bold;
+		}
+
+		.accordion h3 + div
+		{
+			height: 0;
+			padding: 0 1em;
+			overflow: hidden;
+			-webkit-transition: height 0.3s ease-in;
+		}
+
+		.accordion h3 + div img
+		{
+			margin: 4px;
+		}
+
+		.accordion :target h3 + div
+		{
+			height: 350px;
+			overflow: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="accordion">
+		<h2>花千骨剧照</h2>
+		<div id="one" class="section">
+			<h3><a href="#one">海报1</a></h3>
+			<div><img src="images/lipin/lipin001.jpg" /></div>
+		</div>
+		<div id="two" class="section">
+			<h3><a href="#two">海报2</a></h3>
+			<div><img src="images/lipin/lipin002.jpg" /></div>
+		</div>
+		<div id="three" class="section">
+			<h3><a href="#three">海报3</a></h3>
+			<div><img src="images/lipin/lipin003.jpg" /></div>
+		</div>
+	</div>
+</body>
+</html>

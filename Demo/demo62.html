@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>CSS3 文本</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style>
+		p
+		{
+			font-size: 60px;
+			color: #999;
+		}
+
+		p.shadow1
+		{
+			text-shadow: 0.1em 0.1em #333;
+		}
+
+		p.shadow2
+		{
+			text-shadow: -0.1em -0.1em #333;
+		}
+
+		p.shadow3
+		{
+			text-shadow: -0.1em -0.1em 0.2em #333;
+		}
+
+		p.shadow4
+		{
+			text-shadow: 0.2em 0.5em 0.1em #600,
+						-0.3em 0.1em 0.1em #060,
+						0.4em -0.3em 0.1em #006;
+		}
+
+		.box1
+		{
+			background-color: #000;
+			text-align: center;
+			padding: 30px;
+		}
+
+		.box1 p
+		{
+			color: red;
+		}
+
+		.shadow5
+		{
+			text-shadow: 0 0 4px white,
+						0 -5px 4px #ff3,
+						2px -10px 6px #fd3,
+						-2px -15px 11px #f80,
+						2px -25px 18px #f20;
+		}
+
+		.box2 p
+		{
+			background-color: #ccc;
+			text-align: center;
+			font-size: 80px;
+			color: #d1d1d1;
+			padding: 20px;
+			text-shadow: -1px -1px white,
+						1px 1px #333;
+		}
+
+		.box3 p
+		{
+			background-color: #ccc;
+			text-align: center;
+			font-size: 80px;
+			color: #d1d1d1;
+			padding: 20px;
+			text-shadow: 1px 1px white,
+						 -1px -1px #333;
+		}
+
+		.box4 p
+		{
+			background-color: #ccc;
+			text-align: center;
+			font-size: 80px;
+			color: #d1d1d1;
+			padding: 20px;
+			text-shadow: -1px 0 #000,
+						0 1px #000,
+						1px 0 #000,
+						0 -1px #000;
+		}
+
+		.box5 p
+		{
+			background-color: #ccc;
+			text-align: center;
+			font-size: 80px;
+			color: #d1d1d1;
+			padding: 20px;
+			text-shadow: 0 0 0.2em #f87,
+						 0 0 0.2em #f87;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div>
+		<h3>右下角阴影</h3>
+		<p class="shadow1">HTML5+CSS3</p>
+		<h3>左上角角阴影</h3>
+		<p class="shadow2">HTML5+CSS3</p>
+		<h3>左上角角阴影加模糊效果</h3>
+		<p class="shadow3">HTML5+CSS3</p>
+		<h3>多个阴影</h3>
+		<p class="shadow4">HTML5+CSS3</p>
+	</div>
+
+	<div class="box1">
+		<h3>立体文字 火焰文字</h3>
+		<p class="shadow5">HTML5+CSS3</p>
+	</div>
+
+	<div class="box2">
+		<h3>立体文字 凸出</h3>
+		<p>HTML5+CSS3</p>
+	</div>
+
+	<div class="box3">
+		<h3>立体文字 凹陷</h3>
+		<p>HTML5+CSS3</p>
+	</div>
+
+	<div class="box4">
+		<h3>描边</h3>
+		<p>HTML5+CSS3</p>
+	</div>
+
+	<div class="box5">
+		<h3>外发光</h3>
+		<p>HTML5+CSS3</p>
+	</div>
+</body>
+</html>

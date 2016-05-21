@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>canvas 保存与恢复canvas状态</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="flagwind.css" />
+	<style>
+		canvas
+		{
+			border: 1px solid #eee;
+			margin: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="myCanvas" width="400" height="400">您的浏览器不支持canvas</canvas>
+</body>
+</html>
+<script>
+	var c = document.getElementById('myCanvas');
+	var context = c.getContext('2d');
+
+	// 实心矩形1
+	context.fillStyle = '#f0f';
+	context.fillRect(20, 20, 100, 100);
+	context.fill();
+
+	// 空心矩形1
+	context.strokeStyle = 'blue';
+	context.strokeRect(20, 20, 100, 100);
+	context.stroke();
+
+	// 保存当前canvas状态
+	context.save();
+
+	// 空心矩形2
+	context.fillStyle = '#ff0000';
+	context.fillRect(140, 20, 100, 100);
+	context.fill();
+
+	// 空心矩形2
+	context.strokeStyle = 'green';
+	context.strokeRect(140, 20, 100, 100);
+	context.stroke();
+
+	// 恢复第一个矩形的状态
+	context.restore();
+
+	// 绘制两个矩形
+	context.fillRect(20, 140, 50, 50);
+	context.strokeRect(80, 140, 50, 50);
+</script>

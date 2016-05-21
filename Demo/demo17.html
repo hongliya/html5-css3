@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>canvas 绘制二次方贝塞尔曲线</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="flagwind.css" />
+	<style>
+		canvas
+		{
+			border: 1px solid #eee;
+			margin: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="myCanvas" width="400" height="400">您的浏览器不支持canvas</canvas>
+	<button class="btn btn-primary" onclick="clearMap();">清空画布</button>
+</body>
+</html>
+<script>
+	var c = document.getElementById('myCanvas');
+	var context = c.getContext('2d');
+
+	context.strokeStyle = '#000';
+	context.beginPath();
+	context.moveTo(0, 200);
+	context.quadraticCurveTo(75, 50, 300, 200);
+	// context.closePath();
+	context.stroke();
+	context.globalCompositeOperation = 'source-over';
+
+	// 显示控制点和控制线
+	context.strokeStyle = '#f0f';
+	context.beginPath();
+	context.moveTo(75, 50);
+	context.lineTo(0, 200);
+
+	context.moveTo(75, 50);
+	context.lineTo(300, 200);
+	context.stroke();
+
+	/**
+	 * 清空画布
+	 * @return {[type]} [description]
+	 */
+	function clearMap()
+	{
+		context.clearRect(0, 0, 400, 400);
+	}
+</script>

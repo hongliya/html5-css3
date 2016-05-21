@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>CSS3 文本</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style>
+		body
+		{
+			padding: 0px;
+			margin: 0px;
+			background-color: #000;
+			color: #666;
+		}
+
+		.text-shadow-box
+		{
+			position: relative;
+			width: 598px;
+			height: 406px;
+			/*background: #666;*/
+			overflow: hidden;
+			/*border: 1px solid #333;*/
+		}
+
+		.text-shadow-box .wall
+		{
+			position: absolute;
+			width: 100%;
+			top: 175px;
+			left: 0;
+		}
+
+		.text
+		{
+			text-align: center;
+			line-height: 0.5em;
+			margin: 0;
+			height: 1px;
+			color: #999;
+			font-size: 80px;
+			font-weight: bold;
+			text-shadow: 5px -5px 16px #000;
+		}
+
+		.spotlight
+		{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			font-size: 12px;
+			/*background: url(images/shadow.jpg) center no-repeat;*/
+		}
+
+		.spotlight a
+		{
+			color: #ccc;
+			text-decoration: none;
+			position: absolute;
+			left: 45%;
+			top: 58px;
+			float: left;
+			text-shadow: 1px 1px #999,
+						-1px -1px #333;
+		}
+
+		.cat
+		{
+			position: absolute;
+			top: 130px;
+			left: 260px;
+			z-index: 0;
+			opacity: 0.5;
+		}
+
+		.cat img
+		{
+			width: 80px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="text-shadow-box">
+		<div class="wall">
+			<p class="text">黑客帝国</p>
+			<div></div>
+		</div>
+		<div class="spotlight">
+			<a href="#">Hacker Home</a>
+			<div class="cat">
+				<img src="images/cat.jpg" alt="" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

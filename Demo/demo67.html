@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>CSS3 渐变</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style>
+		div
+		{
+			display: inline-block;
+			width: 400px;
+			height: 200px;
+			border: 2px solid #fcf;
+			padding: 4px;
+			margin-bottom: 20px;
+		}
+
+		.box1
+		{
+			background: -webkit-gradient(linear,
+						left top,left bottom,
+						from(blue),to(red));
+			background: -moz-linear-gradient(red, blue);
+			-webkit-background-origin: padding-box;
+			-webkit-background-clip: content-box;
+		}
+
+		.box2
+		{
+			background: -webkit-gradient(linear,
+						left top,left bottom,
+						from(blue),to(red),
+						color-stop(50%,green));
+			background: -moz-linear-gradient(top left, red, blue);
+			-webkit-background-origin: padding-box;
+			-webkit-background-clip: content-box;
+		}
+
+		.box3
+		{
+			background: -webkit-gradient(linear,
+						left top,left bottom,
+						from(blue),to(red),
+						color-stop(0.5,#fff),
+						color-stop(0.5,#000));
+			-webkit-background-origin: padding-box;
+			-webkit-background-clip: content-box;
+		}
+
+		.box4
+		{
+			background: -webkit-gradient(radial,
+						200 100, 10,
+						200 100, 100,
+						from(red), to(green));
+			-webkit-background-origin: padding-box;
+			-webkit-background-clip: content-box;
+		}
+
+		.box5
+		{
+			background: -webkit-gradient(radial,
+						200 100, 10,
+						200 100, 100,
+						from(red), to(green),
+						color-stop(90%, blue));
+			-webkit-background-origin: padding-box;
+			-webkit-background-clip: content-box;
+		}
+
+		.box6
+		{
+			background: -webkit-gradient(radial,
+						120 100, 10,
+						200 100, 100,
+						from(red), to(green));
+			-webkit-background-origin: padding-box;
+			-webkit-background-clip: content-box;
+		}
+
+		.box7
+		{
+			background: -webkit-gradient(radial,
+						180 80, 10,
+						200 100, 90,
+						from(#00c), to(rgba(1,159,98,0)),
+						color-stop(98%, #0cf));
+			-webkit-background-origin: padding-box;
+			-webkit-background-clip: content-box;
+		}
+
+		.box8
+		{
+			background:
+				-webkit-gradient(radial,
+							60 45, 10,
+							52 50, 60,
+							from(#a7d30c), to(rgba(1,159,98,0)),
+							color-stop(90%, #019f62)),
+				-webkit-gradient(radial,
+							105 105, 20,
+							112 120, 80,
+							from(#ff59f8), to(rgba(255,1,136,0)),
+							color-stop(75%, #ff0188)),
+				-webkit-gradient(radial,
+							95 15, 15,
+							102 20, 60,
+							from(#00c9ff), to(rgba(0,201,255,0)),
+							color-stop(80%, #00b5e2)),
+				-webkit-gradient(radial,
+							300 110, 30,
+							300 100, 100,
+							from(#f4f201), to(rgba(228,199,0,0)),
+							color-stop(80%, #e4c700));
+			-webkit-background-origin: padding-box;
+			-webkit-background-clip: content-box;
+		}
+
+		.box9
+		{
+			border-width: 20px;
+			-webkit-border-image: -webkit-gradient(linear,
+								left top, left bottom,
+								from(#00abed), to(#fff),
+								color-stop(0.5, #fff),
+								color-stop(0.5, #6c0)) 20;
+		}
+
+		.box10
+		{
+			border: 10px solid #a7d30c;
+			-webkit-border-image: -webkit-gradient(linear,
+								left top, left bottom,
+								from(#00abed), to(#fff),
+								color-stop(0.5, #fff),
+								color-stop(0.5, #6c0)) 10;
+		}
+
+		.box10:before
+		{
+			display: block;
+			width: 400px;
+			height: 200px;
+			border: 10px solid #019f62;
+			content: -webkit-gradient(radial,
+								200 100, 10,
+								200 100, 100,
+								from(#a7d30c), to(rgba(1,159,98,0)),
+								color-stop(90%, #019f62));
+
+		}
+
+		ul
+		{
+			list-style-image: -webkit-gradient(radial,
+							center center, 4,
+							center center, 8,
+							form(#ff0000), to(rgba(0,0,0,0)),
+							color-stop(50%, #dd0000));
+		}
+	</style>
+</head>
+
+<body>
+	<p>线性渐变</p>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<p>径向渐变</p>
+	<div class="box4"></div>
+	<div class="box5"></div>
+	<div class="box6"></div>
+	<div class="box7"></div>
+	<div class="box8"></div>
+	<p>渐变边框</p>
+	<div class="box9"></div>
+	<div class="box10"></div>
+	<div class="box11"></div>
+	<p>列表图标</p>
+	<ul>
+		<li>111111</li>
+		<li>222222</li>
+		<li>333333</li>
+		<li>444444</li>
+		<li>555555</li>
+	</ul>
+</body>
+</html>

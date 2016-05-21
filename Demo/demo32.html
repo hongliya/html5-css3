@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>事件监测</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="flagwind.css" />
+	<style>
+
+	</style>
+</head>
+
+<body onload="colorload();">
+	<section id="main">
+		<button id="redbutton" class="btn btn-warning" onclick="redSet();">红色</button>
+		<button id="redbutton" class="btn btn-success" onclick="greenSet();">绿色</button>
+		<button id="redbutton" class="btn btn-primary" onclick="blueSet();">蓝色</button>
+		<div id="divblock" style="width:500px;height:500px;border:1px solid #ddd;"></div>
+	</section>
+</body>
+</html>
+<script>
+	// 检测浏览器是否支持localStorage
+	if (typeof localStorage === 'undefined')
+	{
+		console.log('您的浏览器不支持localStorage!');
+	}
+	else
+	{
+		console.log('您的浏览器支持localStorage!');
+	}
+
+	var divBlock = document.getElementById('divblock');
+	/*
+	 * 设置div背景颜色为红色，并保存localStorage
+	 * @return {[type]} [description]
+	 */
+	function redSet()
+	{
+		var value = 'red';
+		divBlock.style.backgroundColor = value;
+		window.localStorage.setItem('divBackGroundColor', value);
+	}
+
+	/*
+	 * 设置div背景颜色为绿色，并保存localStorage
+	 * @return {[type]} [description]
+	 */
+	function greenSet()
+	{
+		var value = 'green';
+		divBlock.style.backgroundColor = value;
+		window.localStorage.setItem('divBackGroundColor', value);
+	}
+
+	/*
+	 * 设置div背景颜色为蓝色，并保存localStorage
+	 * @return {[type]} [description]
+	 */
+	function blueSet()
+	{
+		var value = 'blue';
+		divBlock.style.backgroundColor = value;
+		window.localStorage.setItem('divBackGroundColor', value);
+	}
+
+	function colorload()
+	{
+		divBlock.style.backgroundColor = window.localStorage.getItem('divBackGroundColor');
+	}
+</script>

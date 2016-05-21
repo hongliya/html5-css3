@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>CSS3 动画翻转效果</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style>
+		div
+		{
+			margin: 0 auto;
+			width: 218px;
+			height: 247px;
+			background: url("images/1.jpg") center no-repeat;
+
+			-webkit-animation-name: x-spin;
+			-webkit-animation-duration: 10s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+		}
+
+		@-webkit-keyframes x-spin
+		{
+			0%
+			{
+				-webkit-transform: rotateX(0deg);
+			}
+			50%
+			{
+				-webkit-transform: rotateX(180deg);
+			}
+			100%
+			{
+				-webkit-transform: rotateX(360deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div></div>
+</body>
+</html>

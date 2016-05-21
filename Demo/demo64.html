@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>CSS3 动画</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style>
+		div
+		{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+
+		div:hover
+		{
+			background-color: blue;
+
+			/*属性名称*/
+			-webkit-transition-property       : background-color;
+			-moz-transition-property          : background-color;
+			-o-transition-property            : background-color;
+			transition-property               : background-color;
+
+			/*执行时间*/
+			-webkit-transition-duration       : 2s;
+			-moz-transition-duration          : 2s;
+			-o-transition-duration            : 2s;
+
+			/*延迟时间*/
+			-webkit-transition-delay          : 2s;
+			-moz-transition-delay             : 2s;
+			-o-transition-delay               : 2s;
+
+			/*动画效果*/
+			-webkit-transition-timing-function: linear;
+			-moz-transition-timing-function   : linear;
+			-o-transition-timing-function     : linear;
+		}
+	</style>
+</head>
+
+<body>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>事件监测</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="flagwind.css" />
+	<style>
+	</style>
+</head>
+
+<body>
+	<div class="layout layout fill">
+		<div id="content">
+			<h1>localStorage</h1>
+			<div id="form">
+				<form id="travelForm">
+					<fieldset>
+						<legend>追踪localStorage数据</legend>
+						<div class="field">
+							<label class="label">旅行者</label>
+							<input class="input" type="text" />
+						</div>
+						<div class="field">
+							<label class="label">目的地</label>
+							<input class="input" type="text" />
+						</div>
+						<div class="field">
+							<label class="label">交通工具</label>
+							<input class="input" type="text" />
+						</div>
+						<div class="field text-right">
+							<button class="btn btn-default">清空</button>
+							<button class="btn btn-primary">提交</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div id="result"></div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	var t = new bwTable();
+	console.log(t);
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>CSS3 圆角</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<!-- <link rel="stylesheet" href="flagwind.css" /> -->
+	<style>
+		.box
+		{
+			display: inline-block;
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			line-height: 200px;
+			border: 1px solid red;
+			margin-bottom: 10px;
+		}
+
+		.box1 { border-top-left-radius: 20px;}
+		.box2 { border-top-right-radius: 20px;}
+		.box3 { border-bottom-left-radius: 20px;}
+		.box4 { border-bottom-right-radius: 20px;}
+		.box5 { border-radius: 20px;}
+		.box6 { border-top-left-radius: 100px;}
+		.box7 { border-radius: 100px;}
+	</style>
+</head>
+
+<body>
+	<hr />
+	<h3>圆角</h3>
+	<div class="box box1">20像素圆角，左上角</div>
+	<div class="box box2">20像素圆角，右上角</div>
+	<div class="box box3">20像素圆角，左下角</div>
+	<div class="box box4">20像素圆角，右下角</div>
+	<div class="box box5">20像素圆角，四角</div>
+	<div class="box box6">100像素圆角，左上角</div>
+	<div class="box box7">100像素圆角，四角</div>
+	<hr />
+
+</body>
+</html>

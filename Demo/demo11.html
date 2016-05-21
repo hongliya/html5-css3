@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>表单</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="flagwind.css" />
+
+</head>
+
+<body>
+	<div class="layout layout-fill">
+		<form action="#" autocomplete="on">
+			<fieldset>
+				<legend>新增属性</legend>
+				<div class="field">
+					<label class="label">autocomplete</label>
+					<input class="input" type="text" list="cityList" />
+					<datalist id="cityList" style="display: none;">
+						<option value="0">beijing</option>
+						<option value="1">shanghai</option>
+						<option value="2">guangdong</option>
+						<option value="3">shenzhen</option>
+					</datalist>
+				</div>
+				<div class="field">
+					<label class="label">autofocus</label>
+					<input class="input" type="text" autofocus="autofocus" />
+				</div>
+				<button class="btn btn-primary">Submit</button>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

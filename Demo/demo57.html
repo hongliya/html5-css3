@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>CSS3 边框图片</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<!-- <link rel="stylesheet" href="flagwind.css" /> -->
+	<style>
+		.text-list
+		{
+			width: 500px;
+			height: 460px;
+			padding-top: 15px;
+			border: 1px solid #ccc;
+			background-color: #fff;
+			box-shadow: 5px 5px 6px #000;
+		}
+
+		.text-list li
+		{
+			line-height: 28px;
+		}
+
+		.ul-one
+		{
+			-webkit-transform: rotate(5deg);
+			-ms-transform: rotate(5deg);
+			transform: rotate(5deg);
+		}
+
+		.one
+		{
+			-webkit-transform: rotate(3deg);
+			-ms-transform: rotate(3deg);
+			transform: rotate(3deg);
+		}
+		.two
+		{
+			-webkit-transform: rotate(5deg) scale(1.00, 1.50);
+			-ms-transform: rotate(5deg) scale(1.00, 1.50);
+			transform: rotate(5deg) scale(1.00, 1.50);
+		}
+		.three
+		{
+			-webkit-transform: rotate(-5deg);
+			-ms-transform: rotate(-5deg);
+			transform: rotate(-5deg);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="text-list">
+		<ul class="ul-one">
+			<li>aaa</li>
+			<li><a href="#">缩放大小比例</a></li>
+			<li><a href="#">缩放大小比例</a></li>
+			<li><a href="#">缩放大小比例</a></li>
+			<li><a href="#">缩放大小比例</a></li>
+			<li><a href="#">缩放大小比例</a></li>
+		</ul>
+
+		<ul class="ul-two">
+			<li class="one">bbbbbbbb</li>
+			<li class="two">cccccccc</li>
+			<li class="three">ddddd</li>
+		</ul>
+	</div>
+</body>
+</html>

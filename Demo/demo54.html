@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>canvas 块阴影</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<!-- <link rel="stylesheet" href="flagwind.css" /> -->
+	<style>
+		img
+		{
+			width: 100px;
+			-webkit-box-shadow: 2px 2px 10px #06c;
+		}
+
+		div
+		{
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			margin: 40px;
+			background-color: #ccc;
+		}
+
+		.shadow1 { box-shadow: 10px 10px #06c; }
+		.shadow2 { box-shadow: -10px 10px #06c; }
+		.shadow3 { box-shadow: 10px -10px #06c; }
+		.shadow4 { box-shadow: -10px -10px #06c; }
+		.shadow5 { box-shadow: 10px 10px 0 #06c; }
+		.shadow6 { box-shadow: 10px 10px 10px #06c; }
+		.shadow7 { box-shadow: 10px 10px 0 10px #06c; }
+		.shadow8 { box-shadow: 10px 10px 10px -5px #06c; }
+		.shadow9 { box-shadow: 0px 0px 10px 10px #06c inset; }
+		.shadow10
+		{
+			box-shadow: -10px 0 10px red,
+						10px 0 10px blue,
+						0 10px 10px green,
+						0 -10px 10px yellow;
+		}
+
+		p
+		{
+			text-shadow: 10px 10px 20px #06c;
+		}
+	</style>
+</head>
+
+<body>
+	<hr />
+	<h3>图片阴影</h3>
+	<img src="images/1.jpg" alt="" />
+
+	<hr />
+	<h3>div阴影</h3>
+	<div class="shadow1">box-shadow: 10px 10px #06c;</div>
+	<div class="shadow2">box-shadow: -10px 10px #06c;</div>
+	<div class="shadow3">box-shadow: 10px -10px #06c;</div>
+	<div class="shadow4">box-shadow: -10px -10px #06c;</div>
+	<div class="shadow5">box-shadow: 10px 10px 0 #06c; 模糊半径为0，该值不能为负值</div>
+	<div class="shadow6">box-shadow: 10px 10px 10px #06c; 模糊半径为10</div>
+	<div class="shadow7">box-shadow: 10px 10px 0 10px #06c; 拓展值为正，阴影向外拓展</div>
+	<div class="shadow8">box-shadow: 10px 10px 10px -5px #06c; 拓展值为负，阴影向内收缩</div>
+	<div class="shadow10">box-shadow: -10px 0 10px red, 10px 0 10px blue, 0 10px 10px green, 0 -10px 10px yellow;</div>
+
+	<hr />
+	<h3>文字阴影</h3>
+	<p>添加阴影效果</p>
+</body>
+</html>

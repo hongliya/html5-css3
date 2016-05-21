@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>CSS3 边框图片</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<!-- <link rel="stylesheet" href="flagwind.css" /> -->
+	<style>
+		.box
+		{
+			width: 100px;
+			height: 100px;
+			border: 1em double orange;
+		}
+
+		.box1 { border-image: url("images/border.png") 27; }
+		.box2 { border-image: url("images/border.png") 27 round; }
+		.box3 { border-image: url("images/border.png") 27 repeat; }
+	</style>
+</head>
+
+<body>
+	<h3>边框图片 拉伸</h3>
+	<div class="box box1"></div>
+	<hr />
+
+	<h3>边框图片 平铺</h3>
+	<div class="box box2"></div>
+	<hr />
+
+	<h3>边框图片 重复</h3>
+	<div class="box box3"></div>
+	<hr />
+</body>
+</html>

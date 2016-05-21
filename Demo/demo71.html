@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>CSS3 综合案例：光盘滑出动画</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style>
+		.tunes
+		{
+			margin-left: -20px;
+		}
+
+		.tunes li
+		{
+			position: relative;
+			width: 200px;
+			height: 190px;
+			float: left;
+			margin-left: 20px;
+		}
+
+		.tunes li div.album
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-decoration: none;
+			display: inline;
+			margin: 0 0 48px 0;
+			width: 200px;
+			height: 120px;
+			color: #333;
+
+			-webkit-transition: all .15s linear;
+		}
+
+		.tunes img
+		{
+			width: 120px;
+			position: relative;
+			z-index: 30;
+			float: left;
+			border-radius: 2px;
+
+			-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+		}
+
+		.tunes li div.album div
+		{
+			display: block;
+			opacity: .95;
+			text-align: center;
+			clear: left;
+			width: 120px;
+
+			-webkit-transition: all .25s linear;
+		}
+
+		.tunes li div.album div h5
+		{
+			text-align: center;
+		}
+
+		.tunes li div.album:hover div
+		{
+			opacity: 1;
+		}
+
+		.tunes li div.album span.viny1
+		{
+			width: 116px;
+			height: 116px;
+			z-index: 1;
+			display: block;
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			margin-left: 16px;
+
+			-webkit-transition: all .25s linear;
+		}
+
+		.tunes li div.album span.viny1 div
+		{
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			display: block;
+			z-index: 10;
+			width: 112px;
+			height: 112px;
+			border-radius: 59px;
+			-webkit-box-shadow: 0 0 6px rgba(0,0,0,.5);
+			overflow: hidden;
+			border: solid 1px solid black;
+			border-top: 1px solid rgba(255,255,255,.25);
+			background:
+				-webkit-gradient(linear,
+						left top, left bottom,
+						from(transparent),
+						color-stop(0.1,transparent),
+						color-stop(0.5,rgba(255,255,255,.25)),
+						color-stop(0.9,transparent),
+						to(transparent)),
+				-webkit-gradient(radial,
+						56 56, 10,
+						56 56, 114,
+						from(transparent),
+						color-stop(0.01,transparent),
+						color-stop(0.021,rgba(0,0,0,1)),
+						color-stop(0.09,rgba(0,0,0,1)),
+						color-stop(0.1,rgba(28,28,28,1)),
+						to(rgba(28,28,28,1)));
+
+			-webkit-transition: all .25s linear;
+		}
+
+		.tunes li div.album:hover span.viny1
+		{
+			-webkit-transform: translateX(60px);
+		}
+
+		.tunes li div.album:hover span.viny1 div
+		{
+			-webkit-transform: rotate(120deg);
+			border-top: 0;
+			border-left: 1px solid rgba(255,255,255,.25);
+		}
+
+		.tunes li span.gloss
+		{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 120px;
+			height: 120px;
+			z-index: 100;
+		}
+
+		.tunes li div.album .actions
+		{
+			display: block;
+			position: absolute;
+			width: 60px;
+			border-radius: 3px;
+			left: 70px;
+			top: 0;
+			height: 114px;
+			z-index: 20;
+			-webkit-transition: all 0.25s linear;
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="tunes">
+		<li>
+			<div class="album">
+				<a href="#">
+					<img src="images/jay.jpg">
+				</a>
+				<span class="viny1">
+					<div></div>
+				</span>
+
+				<ul class="actions">
+					<li class="play-pause"><a href="#"></a></li>
+					<li class="info"><a href="#"></a></li>
+				</ul>
+
+				<div>
+					<h5>超人不会飞</h5>
+					<small>作词：周杰伦</small><br />
+					<small>作曲：周杰伦</small><br />
+					<small>演唱：周杰伦</small>
+				</div>
+				<span class="gloss"></span>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>

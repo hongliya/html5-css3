@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>CSS3 综合案例：表单</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style>
+		html, body, h1, form, fieldset, legend, ol, li
+		{
+			margin: 0;
+			padding: 0;
+		}
+
+		body
+		{
+			background-color: #fff;
+			color: #111;
+			padding: 20px;
+		}
+
+		#payment
+		{
+			background-color: #9cbc2c;
+			border-radius: 5px;
+			padding: 20px;
+			width: 400px;
+		}
+
+		#payment fieldset
+		{
+			border: none;
+			margin-bottom: 10px;
+		}
+
+		#payment fieldset:last-of-type
+		{
+			margin-bottom: 0;
+		}
+
+		#payment legend
+		{
+			color: #384313;
+			font-size: 16px;
+			font-weight: bold;
+			padding-bottom: 10px;
+			text-shadow: 0 1px 1px #c0d576;
+		}
+
+		#payment > fieldset > legend:before
+		{
+			content: "Step " counter(fieldsets)"：";
+			counter-increment: fieldsets;
+		}
+
+		#payment fieldset fieldset legend
+		{
+			color: #111;
+			font-size: 13px;
+			font-weight: normal;
+			padding-bottom: 0;
+		}
+
+		#payment ol li
+		{
+			background-color: rgba(255,255,255,.3);
+			border-color: rgba(255,255,255,.6);
+			border-style: solid;
+			border-width: 2px;
+			border-radius: 5px;
+			line-height: 30px;
+			list-style: none;
+			padding: 5px 10px;
+			margin-bottom: 2px;
+		}
+
+		#payment ol ol li
+		{
+			background: none;
+			border: none;
+			float: left;
+		}
+
+		#payment label
+		{
+			float: left;
+			font-size: 13px;
+			width: 110px;
+		}
+
+		#payment fieldset fieldset label
+		{
+			line-height: 20px;
+			padding: 0 0 0 30px;
+			width: auto;
+		}
+
+		#payment fieldset fieldset label:hover
+		{
+			cursor: pointer;
+		}
+
+		#payment input:not([type="radio"]),
+		#payment textarea
+		{
+			background-color: #fff;
+			border: 1px solid #fc3;
+			border-radius: 3px;
+			outline: none;
+			padding: 5px;
+			width: 200px;
+		}
+
+		#payment input:not([type="submint"]):focus,
+		#payment textarea:focus
+		{
+			background-color: #eaeaea;
+			border: 1px solid #f00;
+		}
+
+		#payment input[type="radio"]
+		{
+			float: left;
+			margin-right: 5px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<form id="payment">
+		<fieldset>
+			<legend>用户详细资料</legend>
+			<ol>
+				<li>
+					<label for="name">用户名称：</label>
+					<input id="name" type="text" placeholder="请输入用户名" required autofocus />
+				</li>
+				<li>
+					<label for="email">邮箱地址：</label>
+					<input id="email" type="email" placeholder="example@gmail.com" required />
+				</li>
+				<li>
+					<label for="phone">联系电话：</label>
+					<input id="phone" type="tel" placeholder="13423332221" required />
+				</li>
+			</ol>
+		</fieldset>
+		<fieldset>
+			<legend>收货地址</legend>
+			<ol>
+				<li>
+					<label for="address">详细地址：</label>
+					<textarea id="address" rows="1" required></textarea>
+				</li>
+				<li>
+					<label for="postcode">邮政编码：</label>
+					<input id="postcode" type="text" required />
+				</li>
+				<li>
+					<label for="country">所属国家：</label>
+					<input id="country" type="text" required />
+				</li>
+			</ol>
+		</fieldset>
+		<fieldset>
+			<legend>付款方式</legend>
+			<ol>
+				<li>
+					<fieldset>
+						<legend>行用卡类型</legend>
+						<ol>
+							<li>
+								<input id="visa" type="radio" name="cardtype" />
+								<label for="visa">中国工商银行</label>
+							</li>
+							<li>
+								<input id="amex" type="radio" name="cardtype" />
+								<label for="amex">中国人民银行</label>
+							</li>
+							<li>
+								<input id="mastercard" type="radio" name="cardtype" />
+								<label for="mastercard">中国建设银行</label>
+							</li>
+						</ol>
+					</fieldset>
+				</li>
+				<li>
+					<label for="cardnumber">银行卡号：</label>
+					<input id="cardnumber" type="number" required />
+				</li>
+				<li>
+					<label for="secure">验证码：</label>
+					<input id="secure" type="number" required />
+				</li>
+				<li>
+					<label for="namecard">持卡人：</label>
+					<input id="namecard" type="text" required />
+				</li>
+			</ol>
+		</fieldset>
+		<fieldset>
+			<button type="submit">现在购买</button>
+		</fieldset>
+	</form>
+</body>
+</html>

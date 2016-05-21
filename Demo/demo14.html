@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>canvas 圆形</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" href="flagwind.css" />
+	<style>
+		canvas
+		{
+			border: 1px solid #eee;
+			margin: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="myCanvas" width="400" height="400">您的浏览器不支持canvas</canvas>
+</body>
+</html>
+<script>
+	var c = document.getElementById('myCanvas');
+	console.log(c);
+
+	var context = c.getContext('2d');
+	console.log(context);
+
+	context.fillStyle = '#f88';
+
+	context.beginPath();
+	context.arc(200, 70, 50, 0, Math.PI*2, true);
+	context.closePath();
+	context.fill();
+
+	for (var i = 0; i < 10; i++)
+	{
+		context.fillStyle = '#999';
+		context.beginPath();
+		context.arc(0, 400, i*15, 0, Math.PI*3/2, true);
+		// context.closePath();
+		context.stroke();
+	}
+
+</script>

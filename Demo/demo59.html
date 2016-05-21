@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<title>CSS3 属性选择器</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style>
+		p
+		{
+			border: 1px solid #eee;
+			margin: 4px;
+			padding: 10px;
+		}
+
+		/*以http开头*/
+		a[href^="http"]:before
+		{
+			content: "有效超链接 -- ";
+			color: green;
+		}
+
+		/*以pdf结尾*/
+		a[href$="pdf"]
+		{
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<p><a href="http://www.baidu.com/name.pdf">pdf</a></p>
+	<p><a href="http://www.baidu.com/name.ppt">ppt</a></p>
+	<p><a href="http://www.baidu.com/name.xls">xls</a></p>
+	<p><a href="http://www.baidu.com/name.rar">rar</a></p>
+	<p><a href="http://www.baidu.com/name.gif">gif</a></p>
+	<p><a href="http://www.baidu.com/name.jpg">jpg</a></p>
+	<p><a href="http://www.baidu.com/name.png">png</a></p>
+	<p><a href="http://www.baidu.com/name.txt">txt</a></p>
+	<p><a href="http://www.baidu.com/#anchor">锚点</a></p>
+	<p><a href="http://www.baidu.com">http://www.baidu.com</a></p>
+</body>
+</html>
